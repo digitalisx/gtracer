@@ -5,7 +5,15 @@
 </p>
 
 ## Introduction
+This project helps analysts see easily "Google Sync and Backup" log of uploads, downloads, and creation, modification, and deletion action.
 
+- Timestamp
+- Log level
+- Event Result
+- Event Type
+- Action
+- Folder
+- File
 
 ## Install
 
@@ -20,16 +28,16 @@ yarn dev
 ```
 
 ## Result
-![dfsadf](./doc/img/xlsx_result.png)
+![result](./doc/img/xlsx_result.png)
 
 
 ## Architecture
 
 ```mermaid
 sequenceDiagram
-    participant dotcom
-    participant iframe
-    participant viewscreen
+    participant run
+    participant model
+    participant export
     dotcom->>iframe: loads html w/ iframe url
     iframe->>viewscreen: request template
     viewscreen->>iframe: html & javascript
@@ -37,6 +45,12 @@ sequenceDiagram
     dotcom->>iframe: set mermaid data on iframe
     iframe->>iframe: render mermaid
 ```
+
+## Roadmap
+
+- Python
+- Library
+
 ## Contribution
 
 We are always waiting for suggestions or contributions from everyone who is interested in this project. Please refer to the following rules.
